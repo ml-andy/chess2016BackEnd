@@ -28,7 +28,7 @@ gulp.task('js',function(){
 });
 gulp.task('connect', function() {
   $.connect.server({
-  	root: 'D:/yihsien/js-mongoDB_mLab/andy/',
+  	root: 'D:/YiHsien/chess2016BackEnd/andy/',
   	livereload: true
   });
 });

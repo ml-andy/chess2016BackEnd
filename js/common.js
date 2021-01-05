@@ -20,7 +20,7 @@
 
 	//Event	
 	function signup(){
-		var _url = 'https://api.mlab.com/api/1/databases/chinesechess2016/collections/user?q={useraccount:"'+$('.login_page .signaccount').val()+'"}&apiKey='+ webData.mlabApikey;
+		var _url = 'https://mongo-data-api-chinesechess.herokuapp.com/api/1/databases/chinesechess2016/collections/user?q={useraccount:"'+$('.login_page .signaccount').val()+'"}&apiKey='+ webData.mlabApikey;
 		showLoading(true);
 		$.ajax({
 			url: _url,
@@ -42,7 +42,7 @@
 				return;
 			}
 			$.ajax({
-				url: 'https://api.mlab.com/api/1/databases/chinesechess2016/collections/user?apiKey='+ webData.mlabApikey,
+				url: 'https://mongo-data-api-chinesechess.herokuapp.com/api/1/databases/chinesechess2016/collections/user?apiKey='+ webData.mlabApikey,
 				type: 'POST',
 				contentType: 'application/json',
 				data:JSON.stringify({
@@ -71,7 +71,7 @@
 		else $('.login_pagein').removeClass('on');
 	}	
 	function userlogin(_useraccount,_userpassword){
-		var _url = 'https://api.mlab.com/api/1/databases/chinesechess2016/collections/user?q={useraccount:"'+_useraccount+'",userpassword:"'+ _userpassword +'"}&apiKey='+ webData.mlabApikey;
+		var _url = 'https://mongo-data-api-chinesechess.herokuapp.com/api/1/databases/chinesechess2016/collections/user?q={useraccount:"'+_useraccount+'",userpassword:"'+ _userpassword +'"}&apiKey='+ webData.mlabApikey;
 		showLoading(true);
 		$.ajax({
 			url: _url,
